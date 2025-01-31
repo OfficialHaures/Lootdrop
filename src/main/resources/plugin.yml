@@ -1,0 +1,4 @@
+name: Lootdrop
+version: '1.0'
+main: nl.usefultime.lootdrop.Lootdrop
+api-version: '1.21'
