@@ -1,12 +1,13 @@
 package nl.usefultime.lootdrop.commands;
 
+import nl.usefultime.lootdrop.Lootdrop;
 import nl.usefultime.lootdrop.gui.MainGUI;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class LootdrorpCommand implements CommandExecutor {
+public class LootdropCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
@@ -20,7 +21,7 @@ public class LootdrorpCommand implements CommandExecutor {
             player.sendMessage("§cYou do not have permission to use this command");
             return false;
         }
-        MainGUI gui = new MainGUI();
+        MainGUI gui = new MainGUI(Lootdrop.getInstance());
         player.openInventory(gui.getInventory());
         return true;
     }

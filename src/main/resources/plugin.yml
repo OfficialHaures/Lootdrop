@@ -2,3 +2,8 @@ name: Lootdrop
 version: '1.0'
 main: nl.usefultime.lootdrop.Lootdrop
 api-version: '1.21'
+commands:
+  lootdrop:
+    description: Opens the lootdrop configuration GUI
+    usage: /<command>
+    permission: lootdrop.admin
